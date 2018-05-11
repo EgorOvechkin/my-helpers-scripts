@@ -10,6 +10,6 @@ svg_string=`cat $path_to_svg`
 
 echo $'\n'"@mixin $mixin_name() {" >> $path_to_icons
 echo $'  $svg-string:' "'""$svg_string""';" >> $path_to_icons
-echo '  background: url("data:image/svg+xml;utf-8,#{$svg-string}") 0 no-repeat / contain;' >> $path_to_icons
+echo '  background: url("data:image/svg+xml;utf-8,#{escape-hash($svg-string)}") 0 no-repeat / contain;' >> $path_to_icons
 echo '}' >> $path_to_icons
 exit 0
