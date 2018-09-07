@@ -3,7 +3,7 @@ svg_name=$1
 mixin_name=$2
 path_to_svg="$HOME/svg/$svg_name"
 path_to_project="$HOME/projects/crm_tulip"
-path_to_icons="$path_to_project/app/assets/stylesheets/scss/icons.scss.erb"
+path_to_icons="$path_to_project/app/assets/stylesheets/scss/icons.scss"
 
 svgo $path_to_svg
 svg_string=`cat $path_to_svg`
